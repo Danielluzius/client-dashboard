@@ -13,6 +13,6 @@ export const APP_CONFIG = {
   NAME: 'Client Dashboard',
   DESCRIPTION: 'Professional client dashboard built with Next.js, React & TypeScript',
   AUTHOR: 'Daniel',
-  GITHUB_URL: 'https://github.com',
+  GITHUB_URL: 'https://github.com/Danielluzius/client-dashboard',
   API_SOURCE_URL: 'https://jsonplaceholder.typicode.com',
 } as const;
