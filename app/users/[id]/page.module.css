@@ -1,0 +1,126 @@
+.userDetailPage {
+  max-width: 100%;
+}
+
+.header {
+  margin-bottom: var(--space-xl);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.userInfoCard {
+  background: white;
+}
+
+.userName {
+  margin: 0 0 var(--space-xs) 0;
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.userUsername {
+  margin: 0 0 var(--space-xl) 0;
+  color: var(--gray-500);
+  font-size: 1rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-2xl);
+}
+
+.infoSection h3 {
+  margin: 0 0 var(--space-lg) 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--primary-100);
+}
+
+.infoRow {
+  display: flex;
+  margin-bottom: var(--space-md);
+  gap: var(--space-md);
+}
+
+.label {
+  font-weight: 600;
+  color: var(--gray-600);
+  min-width: 100px;
+  font-size: 0.875rem;
+}
+
+.value {
+  color: var(--gray-900);
+  flex: 1;
+  font-size: 0.875rem;
+}
+
+.postsCard {
+  background: white;
+}
+
+.postsCard h2 {
+  margin: 0 0 var(--space-sm) 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.postsCount {
+  margin: 0 0 var(--space-xl) 0;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.postItem {
+  padding: var(--space-lg);
+  background: linear-gradient(135deg, var(--gray-50), var(--primary-50));
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary-500);
+  transition: all var(--transition-base);
+}
+
+.postItem:hover {
+  border-left-width: 4px;
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+}
+
+.postTitle {
+  margin: 0 0 var(--space-sm) 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  text-transform: capitalize;
+}
+
+.postBody {
+  margin: 0;
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.noPosts {
+  color: var(--gray-500);
+  font-style: italic;
+  margin: 0;
+  text-align: center;
+  padding: var(--space-xl);
+}

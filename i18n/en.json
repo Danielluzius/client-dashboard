@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "logo": "Client Dashboard",
+    "dashboard": "Dashboard",
+    "users": "Users"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Welcome to the Client Dashboard. Here you can find an overview of all important metrics.",
+    "loading": "Loading dashboard data...",
+    "stats": {
+      "users": "Registered Users",
+      "posts": "Published Posts",
+      "lastUpdate": "Last Update"
+    },
+    "about": {
+      "title": "About this Dashboard",
+      "description": "This dashboard serves as a demonstration of modern React and Next.js development. Data is loaded from the public JSONPlaceholder API.",
+      "features": {
+        "typescript": "Type-safe API integration with TypeScript",
+        "errorHandling": "Professional error and loading handling",
+        "architecture": "Clean component architecture",
+        "responsive": "Responsive design with CSS Modules",
+        "nextjs": "Next.js App Router with Client Components"
+      }
+    }
+  },
+  "users": {
+    "title": "Users",
+    "subtitle": "Overview of all registered users. Click on \"Details\" for more information.",
+    "loading": "Loading users...",
+    "empty": "No users found.",
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "city": "City",
+      "action": "Action",
+      "details": "Details"
+    }
+  },
+  "userDetail": {
+    "loading": "Loading user data...",
+    "invalidId": "Invalid user ID",
+    "backButton": "← Back to Overview",
+    "contact": {
+      "title": "Contact Information",
+      "email": "Email:",
+      "phone": "Phone:",
+      "website": "Website:"
+    },
+    "address": {
+      "title": "Address",
+      "street": "Street:",
+      "city": "City:"
+    },
+    "company": {
+      "title": "Company",
+      "name": "Name:",
+      "slogan": "Slogan:",
+      "business": "Business:"
+    },
+    "posts": {
+      "title": "Posts by",
+      "count": "Post",
+      "countPlural": "Posts",
+      "empty": "This user hasn't published any posts yet."
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": {
+      "title": "Error",
+      "retry": "Try Again"
+    }
+  }
+}

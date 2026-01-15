@@ -1,0 +1,68 @@
+.langButton {
+  color: var(--gray-600);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.langButton::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-500), var(--primary-700));
+  transition: width var(--transition-base);
+}
+
+.langButton:hover {
+  color: var(--primary-600);
+  background-color: var(--primary-50);
+}
+
+.langButton:hover::after {
+  width: 80%;
+}
+
+.langButton.active {
+  color: var(--primary-600);
+  background-color: var(--primary-50);
+  font-weight: 600;
+}
+
+.langButton.active::after {
+  width: 80%;
+}
+
+/* Mobile Anpassungen */
+@media (max-width: 768px) {
+  .langButton {
+    display: block;
+    width: 100%;
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: 0;
+    text-align: left;
+  }
+
+  .langButton::after {
+    display: none;
+  }
+
+  .langButton.active {
+    background-color: var(--primary-50);
+    border-left: 4px solid var(--primary-600);
+  }
+}

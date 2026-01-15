@@ -1,0 +1,139 @@
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Base skeleton styling - shared across all skeleton elements */
+.statTitle,
+.statValue,
+.cardHeader,
+.line,
+.lineShort,
+.tableHeaderCell,
+.tableCell,
+.textLine {
+  background: linear-gradient(90deg, var(--gray-200) 0%, var(--gray-100) 50%, var(--gray-200) 100%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+  border-radius: var(--radius-md);
+}
+
+/* Stats Skeleton */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.statCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.statTitle {
+  height: 0.875rem;
+  width: 60%;
+  margin-bottom: var(--space-md);
+}
+
+.statValue {
+  height: 2rem;
+  width: 40%;
+}
+
+/* Card Skeleton */
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.cardHeader {
+  height: 1.5rem;
+  width: 50%;
+  margin-bottom: var(--space-lg);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.line {
+  height: 1rem;
+  width: 100%;
+}
+
+.lineShort {
+  height: 1rem;
+  width: 70%;
+}
+
+/* Table Skeleton */
+.tableContainer {
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+}
+
+.tableHeader {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--gray-50);
+  border-bottom: 2px solid var(--gray-200);
+}
+
+.tableHeaderCell {
+  height: 0.875rem;
+  width: 80%;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--gray-100);
+}
+
+.tableRow:last-child {
+  border-bottom: none;
+}
+
+.tableCell {
+  height: 1rem;
+  width: 85%;
+}
+
+/* Text Skeleton */
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.textLine {
+  height: 1rem;
+  width: 100%;
+}

@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "logo": "Client Dashboard",
+    "dashboard": "Dashboard",
+    "users": "Nutzer"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Willkommen im Client Dashboard. Hier finden Sie eine Übersicht aller wichtigen Kennzahlen.",
+    "loading": "Dashboard-Daten werden geladen...",
+    "stats": {
+      "users": "Registrierte Nutzer",
+      "posts": "Veröffentlichte Beiträge",
+      "lastUpdate": "Letzte Aktualisierung"
+    },
+    "about": {
+      "title": "Über dieses Dashboard",
+      "description": "Dieses Dashboard dient als Demonstration moderner React- und Next.js-Entwicklung. Die Daten werden von der öffentlichen JSONPlaceholder API geladen.",
+      "features": {
+        "typescript": "Typsichere API-Integration mit TypeScript",
+        "errorHandling": "Professionelles Error- und Loading-Handling",
+        "architecture": "Saubere Komponentenarchitektur",
+        "responsive": "Responsive Design mit CSS Modules",
+        "nextjs": "Next.js App Router mit Client Components"
+      }
+    }
+  },
+  "users": {
+    "title": "Nutzer",
+    "subtitle": "Übersicht aller registrierten Nutzer. Klicken Sie auf \"Details\" für weitere Informationen.",
+    "loading": "Nutzer werden geladen...",
+    "empty": "Keine Nutzer gefunden.",
+    "table": {
+      "name": "Name",
+      "email": "E-Mail",
+      "company": "Firma",
+      "city": "Stadt",
+      "action": "Aktion",
+      "details": "Details"
+    }
+  },
+  "userDetail": {
+    "loading": "Nutzerdaten werden geladen...",
+    "invalidId": "Ungültige Nutzer-ID",
+    "backButton": "← Zurück zur Übersicht",
+    "contact": {
+      "title": "Kontaktinformationen",
+      "email": "E-Mail:",
+      "phone": "Telefon:",
+      "website": "Website:"
+    },
+    "address": {
+      "title": "Adresse",
+      "street": "Straße:",
+      "city": "Stadt:"
+    },
+    "company": {
+      "title": "Firma",
+      "name": "Name:",
+      "slogan": "Slogan:",
+      "business": "Geschäftsfeld:"
+    },
+    "posts": {
+      "title": "Beiträge von",
+      "count": "Beitrag",
+      "countPlural": "Beiträge",
+      "empty": "Dieser Nutzer hat noch keine Beiträge verfasst."
+    }
+  },
+  "common": {
+    "loading": "Lädt...",
+    "error": {
+      "title": "Fehler",
+      "retry": "Erneut versuchen"
+    }
+  }
+}
