@@ -1,214 +1,230 @@
 # Client Dashboard
 
-Ein professionelles Client-Dashboard als Portfolio-Projekt, entwickelt mit modernen Frontend-Technologien.
+_[🇩🇪 Deutsche Version](README.de.md)_
 
-## 📋 Projektziel
+A professional client dashboard as a portfolio project, built with modern frontend technologies.
 
-Dieses Projekt demonstriert die Implementierung eines realistischen Client-Dashboards, wie es in Agentur- und Kundenprojekten zum Einsatz kommt. Der Fokus liegt auf **Code-Qualität**, **sauberer Architektur** und **Best Practices** – nicht auf Spielereien oder übermäßigem Design.
+## 📋 Project Goal
 
-Das Dashboard dient als Bewerbungsportfolio für Frontend-Entwickler-Positionen mit React & Next.js.
+This project demonstrates the implementation of a realistic client dashboard, as used in agency and client projects. The focus is on **code quality**, **clean architecture**, and **best practices** – not on gimmicks or excessive design.
 
-## 🛠 Tech-Stack
+The dashboard serves as a portfolio for frontend developer positions with React & Next.js.
+
+## 🛠 Tech Stack
 
 - **Framework**: Next.js 14 (App Router)
 - **Library**: React 18
-- **Sprache**: TypeScript (strict mode)
+- **Language**: TypeScript (strict mode)
 - **Styling**: CSS Modules
-- **API**: JSONPlaceholder (öffentliche REST-API)
+- **API**: JSONPlaceholder (public REST API)
 - **Data Fetching**: Native Fetch API
 
-### Bewusste Entscheidungen
+### Deliberate Decisions
 
-- ✅ **Keine UI-Frameworks** (Material-UI, Chakra, Tailwind) – Fokus auf grundlegende CSS-Fähigkeiten
-- ✅ **Keine komplexen State-Management-Libs** – React Hooks reichen aus
-- ✅ **App Router statt Pages Router** – Moderne Next.js-Architektur
-- ✅ **TypeScript ohne `any`** – Vollständige Type-Safety
+- ✅ **No UI Frameworks** (Material-UI, Chakra, Tailwind) – Focus on fundamental CSS skills
+- ✅ **No complex state management libs** – React Hooks are sufficient
+- ✅ **App Router instead of Pages Router** – Modern Next.js architecture
+- ✅ **TypeScript without `any`** – Complete type safety
 
-## 📁 Projektarchitektur
+## 📁 Project Architecture
 
 ```
 client-dashboard/
 ├── app/                          # Next.js App Router
-│   ├── layout.tsx               # Root Layout mit Meta-Tags
+│   ├── layout.tsx               # Root Layout with Meta Tags
 │   ├── page.tsx                 # Dashboard (Homepage)
-│   ├── globals.css              # Globale Styles & Design-System
-│   └── users/                   # Users-Feature
-│       ├── page.tsx             # Nutzerliste
-│       └── [id]/                # Dynamisches Routing
-│           └── page.tsx         # Nutzer-Detailseite
-├── components/                   # React Komponenten
-│   ├── layout/                  # Layout-Komponenten
-│   │   ├── MainLayout.tsx       # Haupt-Layout-Wrapper
-│   │   └── Navigation.tsx       # Navigation mit Mobile Menu
-│   └── ui/                      # Wiederverwendbare UI-Bausteine
+│   ├── globals.css              # Global Styles & Design System
+│   └── users/                   # Users Feature
+│       ├── page.tsx             # User List
+│       └── [id]/                # Dynamic Routing
+│           └── page.tsx         # User Detail Page
+├── components/                   # React Components
+│   ├── layout/                  # Layout Components
+│   │   ├── MainLayout.tsx       # Main Layout Wrapper
+│   │   └── Navigation.tsx       # Navigation with Mobile Menu
+│   └── ui/                      # Reusable UI Components
 │       ├── Button.tsx
 │       ├── Card.tsx
 │       ├── ErrorMessage.tsx
 │       ├── LoadingSpinner.tsx
-│       ├── LoadingSkeleton.tsx  # Moderne Skeleton-Loader
+│       ├── LoadingSkeleton.tsx  # Modern Skeleton Loaders
 │       ├── StatCard.tsx
 │       └── UserTable.tsx
 ├── hooks/                        # Custom React Hooks
 │   └── index.ts                 # useMediaQuery, useWindowSize, etc.
+├── i18n/                         # Internationalization
+│   ├── de.json                  # German translations
+│   ├── en.json                  # English translations
+│   ├── i18n.config.ts           # i18n configuration
+│   └── I18nProvider.tsx         # i18n context provider
 ├── lib/                          # Utilities & Helpers
-│   ├── constants.ts             # App-weite Konstanten
-│   └── utils.ts                 # Helper-Funktionen
+│   ├── constants.ts             # App-wide constants
+│   └── utils.ts                 # Helper functions
 ├── services/                     # API Service Layer
-│   └── api.ts                   # Zentrale API-Funktionen
-├── types/                        # TypeScript Definitionen
-│   └── index.ts                 # Gemeinsame Types
-├── .editorconfig                # Code-Style Konsistenz
-├── .eslintrc.js                 # ESLint Konfiguration
-├── .prettierrc                  # Prettier Konfiguration
+│   └── api.ts                   # Centralized API functions
+├── types/                        # TypeScript Definitions
+│   └── index.ts                 # Shared types
+├── .editorconfig                # Code style consistency
+├── .eslintrc.js                 # ESLint configuration
+├── .prettierrc                  # Prettier configuration
 ├── package.json
 ├── tsconfig.json
 ├── next.config.js
 └── README.md
 ```
 
-### Architektur-Prinzipien
+### Architecture Principles
 
 1. **Separation of Concerns**
-   - UI-Komponenten (`components/ui/`) sind wiederverwendbar und präsentationsorientiert
-   - Layout-Komponenten (`components/layout/`) strukturieren Seiten
-   - Service Layer (`services/`) kapselt API-Logik
-   - Types (`types/`) zentralisieren TypeScript-Definitionen
-   - Hooks (`hooks/`) für wiederverwendbare React-Logik
-   - Lib (`lib/`) für utilities, constants und helpers
+   - UI components (`components/ui/`) are reusable and presentation-oriented
+   - Layout components (`components/layout/`) structure pages
+   - Service layer (`services/`) encapsulates API logic
+   - Types (`types/`) centralize TypeScript definitions
+   - Hooks (`hooks/`) for reusable React logic
+   - Lib (`lib/`) for utilities, constants, and helpers
 
 2. **Component Design**
-   - Kleine, fokussierte Komponenten
-   - Props-Interface für jede Komponente
-   - CSS Modules für Scoped Styling
-   - Klare Trennung von Logik und Darstellung
+   - Small, focused components
+   - Props interface for each component
+   - CSS Modules for scoped styling
+   - Clear separation of logic and presentation
 
 3. **Error & Loading Handling**
-   - Konsistente Loading-States mit `LoadingSpinner`
-   - Professionelle Error-Messages mit Retry-Funktionalität
-   - Type-safe Error-Handling über TypeScript
+   - Consistent loading states with `LoadingSpinner`
+   - Professional error messages with retry functionality
+   - Type-safe error handling via TypeScript
 
 4. **API Integration**
-   - Zentralisierte Fetch-Logik in `services/api.ts`
-   - Wiederverwendbare `fetchApi`-Funktion
-   - Error-Handling auf Service-Ebene
-   - Parallele API-Calls wo sinnvoll (`Promise.all`)
+   - Centralized fetch logic in `services/api.ts`
+   - Reusable `fetchApi` function
+   - Error handling at service level
+   - Parallel API calls where appropriate (`Promise.all`)
 
-## 🚀 Installation & Start
+## 🚀 Installation & Setup
 
-### Voraussetzungen
+### Prerequisites
 
-- Node.js (Version 18 oder höher)
-- npm oder yarn
+- Node.js (version 18 or higher)
+- npm or yarn
 
 ### Setup
 
 ```bash
-# Dependencies installieren
+# Install dependencies
 npm install
 
-# Development Server starten
+# Start development server
 npm run dev
 
-# Production Build
+# Production build
 npm run build
 npm start
 ```
 
-Die Anwendung läuft unter [http://localhost:3000](http://localhost:3000)
+The application runs at [http://localhost:3000](http://localhost:3000)
 
-## 📄 Funktionalität
+## 📄 Features
 
 ### Dashboard (`/`)
 
-- Übersicht mit Statistik-Karten
-- Anzahl Nutzer und Beiträge
-- Letzte Aktualisierung
-- Informationen über das Projekt
+- Overview with statistics cards
+- Number of users and posts
+- Last update timestamp
+- Project information
+- Bilingual support (German/English)
 
-### Nutzerliste (`/users`)
+### User List (`/users`)
 
-- Tabellarische Darstellung aller Nutzer
-- Anzeige von Name, E-Mail, Firma und Stadt
-- Klick auf "Details" führt zur Detailseite
-- Loading- und Error-States
+- Tabular display of all users
+- Shows name, email, company, and city
+- Click "Details" to navigate to detail page
+- Loading and error states
 
-### Nutzer-Detail (`/users/[id]`)
+### User Detail (`/users/[id]`)
 
-- Detaillierte Nutzerinformationen
-- Kontaktdaten, Adresse und Firma
-- Liste aller Beiträge des Nutzers
-- "Zurück"-Navigation
-- Robustes Error-Handling bei ungültiger ID
+- Detailed user information
+- Contact details, address, and company
+- List of all user posts
+- "Back" navigation
+- Robust error handling for invalid IDs
+
+## 🌐 Internationalization
+
+- Custom i18n implementation (no external libraries)
+- Support for German and English
+- Language switcher in navigation
+- Persistent language selection (localStorage)
+- Type-safe translation keys
 
 ## 🎯 Best Practices
 
-### Code-Qualität
+### Code Quality
 
-- ✅ Konsistente Namenskonventionen
-- ✅ TypeScript ohne `any`
-- ✅ Kommentare nur wo nötig (Erklärung "Warum", nicht "Was")
-- ✅ ESLint-konforme Code-Struktur
+- ✅ Consistent naming conventions
+- ✅ TypeScript without `any`
+- ✅ Clean code without unnecessary comments
+- ✅ ESLint-compliant code structure
 
 ### React & Next.js
 
-- ✅ Client Components mit `'use client'` Direktive
-- ✅ App Router für modernes Routing
-- ✅ Hooks korrekt verwendet (`useEffect`, `useState`)
-- ✅ Dynamisches Routing mit `[id]`-Pattern
+- ✅ Client Components with `'use client'` directive
+- ✅ App Router for modern routing
+- ✅ Proper use of hooks (`useEffect`, `useState`)
+- ✅ Dynamic routing with `[id]` pattern
 
 ### Performance
 
-- ✅ Parallele API-Calls mit `Promise.all`
-- ✅ CSS Modules für optimiertes Styling
-- ✅ Keine unnötigen Re-Renders
+- ✅ Parallel API calls with `Promise.all`
+- ✅ CSS Modules for optimized styling
+- ✅ No unnecessary re-renders
 
 ### UX/UI
 
-- ✅ Konsistentes Design-System
-- ✅ Klare Feedback-Mechanismen
-- ✅ Responsive Design (Mobile-First)
-- ✅ Accessibility-Grundlagen
+- ✅ Consistent design system
+- ✅ Clear feedback mechanisms
+- ✅ Responsive design (mobile-first)
+- ✅ Accessibility basics
 
-## 📝 Bewertungskriterien erfüllt
+## 📝 Evaluation Criteria Met
 
-### Funktional
+### Functional
 
-- ✅ Alle geforderten Seiten implementiert
-- ✅ Dynamisches Routing funktioniert
-- ✅ API-Integration vollständig
-- ✅ Loading- und Error-States vorhanden
+- ✅ All required pages implemented
+- ✅ Dynamic routing works
+- ✅ Complete API integration
+- ✅ Loading and error states present
 
-### Technisch
+### Technical
 
-- ✅ Saubere Komponentenarchitektur
-- ✅ TypeScript konsequent eingesetzt
-- ✅ Wiederverwendbare UI-Komponenten
-- ✅ Service Layer für API-Calls
+- ✅ Clean component architecture
+- ✅ TypeScript consistently used
+- ✅ Reusable UI components
+- ✅ Service layer for API calls
 
-### Qualität
+### Quality
 
-- ✅ Keine riesigen Komponenten
-- ✅ Sinnvolle Benennung
-- ✅ Wartbarer, lesbarer Code
-- ✅ Professionelles Error-Handling
+- ✅ No massive components
+- ✅ Meaningful naming
+- ✅ Maintainable, readable code
+- ✅ Professional error handling
 
-## 🔄 Mögliche Erweiterungen
+## 🔄 Possible Extensions
 
-Falls du das Projekt weiterentwickeln möchtest:
+If you want to further develop the project:
 
-- Pagination für Nutzerliste
-- Filter- und Suchfunktionen
-- Error Boundary für globales Error-Handling
-- Unit Tests mit Jest/React Testing Library
-- E2E Tests mit Playwright
-- Authentifizierung (optional)
-- Dark Mode
+- Pagination for user list
+- Filter and search functions
+- Error Boundary for global error handling
+- Unit tests with Jest/React Testing Library
+- E2E tests with Playwright
+- Authentication (optional)
+- Dark mode
 
-## 📧 Autor
+## 📧 Author
 
 Daniel  
-Portfolio-Projekt für Bewerbungen als Frontend Developer
+Portfolio project for frontend developer applications
 
 ---
 
-**Hinweis**: Dieses Projekt nutzt die öffentliche [JSONPlaceholder API](https://jsonplaceholder.typicode.com/) für Demonstrationszwecke. Die Daten sind Platzhalter und nicht persistent.
+**Note**: This project uses the public [JSONPlaceholder API](https://jsonplaceholder.typicode.com/) for demonstration purposes. The data is placeholder and not persistent.
