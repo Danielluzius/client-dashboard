@@ -30,6 +30,9 @@
     "subtitle": "Übersicht aller registrierten Nutzer. Klicken Sie auf \"Details\" für weitere Informationen.",
     "loading": "Nutzer werden geladen...",
     "empty": "Keine Nutzer gefunden.",
+    "searchPlaceholder": "Nutzer suchen (Name, E-Mail, Firma)...",
+    "showingResults": "Zeige {{start}} - {{end}} von {{total}} Nutzern",
+    "noResults": "Keine Nutzer gefunden, die Ihrer Suche entsprechen.",
     "table": {
       "name": "Name",
       "email": "E-Mail",

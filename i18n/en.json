@@ -30,6 +30,9 @@
     "subtitle": "Overview of all registered users. Click on \"Details\" for more information.",
     "loading": "Loading users...",
     "empty": "No users found.",
+    "searchPlaceholder": "Search users (name, email, company)...",
+    "showingResults": "Showing {{start}} - {{end}} of {{total}} users",
+    "noResults": "No users found matching your search.",
     "table": {
       "name": "Name",
       "email": "Email",

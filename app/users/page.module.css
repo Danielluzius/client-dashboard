@@ -20,6 +20,38 @@
   line-height: 1.6;
 }
 
+.searchContainer {
+  margin-bottom: var(--space-xl);
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 32rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  background: white;
+  color: var(--gray-900);
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.searchInput::placeholder {
+  color: var(--gray-400);
+}
+
+.resultsInfo {
+  margin-bottom: var(--space-md);
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
 .tableWrapper {
   background: white;
   border-radius: var(--radius-lg);
